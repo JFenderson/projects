@@ -1,0 +1,43 @@
+.primary-color {
+    color: grey;
+}
+.nav-fix {
+    
+}
+body {
+    background-color: #EFEFEF;
+}
+.section-padding {
+    padding: 2em 7em;
+}
+nav {
+    background-color: #EFEFEF; 
+}
+.logo {
+    border: 2px solid #FF3B3F;
+    border-radius: 10px;
+    background-color: #FF3B3F;
+}
+.about {
+    background-color: #FF3B3F;
+}
+.projects {
+    background-color: #CAEBF2;   
+}
+.projects img {
+    height: 50%;
+    width: 50%;
+    padding: 2px;
+}
+.posting {
+    background-color: #A9A9A9;
+    
+}
+.posting hr {
+    width: 50%;
+}
+
+
+.contact {
+    background-color: #FF3B3F;
+}
