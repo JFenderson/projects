@@ -23,12 +23,26 @@
     height: 2em;
     width: 50%;
 }
+.hero {
+    
+    text-align: center;
+    /* padding: 2em 3em; */
+    /* background-color: rgba(86, 143, 242, 0.379); */
+}
+.learnMore {
+    background-color: rgba(235, 90, 235, 0.858);
+}
 .cardDisplay {
-    position: relative;
+    
     padding: 2em 3em;
     background-color: rgba(0, 94, 255, 0.379);
 }
-.info {
+.hero-image {
+    background-image: url(https://covalence.io/static/img/home/home-hero.jpg);
+    height: 20em;
+    width: 100%;
+}
+.content {
     position: absolute;
     width: 50%;
     left: 11em;
