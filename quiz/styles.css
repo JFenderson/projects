@@ -1,0 +1,49 @@
+.mainContainer {
+    
+    padding: 1em 4em;
+    background-color: rgba(27, 75, 233, 0.29);
+}
+.navbar {
+    background-color: rgba(153, 50, 204, 0.386)
+}
+
+.covalenceImg {
+    height: 2em;
+    width: 50%;
+    float: left;
+}
+.typingImg {
+    height: 20em;
+    width: 50%;
+    
+    
+}
+.card-img {
+    position: relative;
+    height: 2em;
+    width: 50%;
+}
+.cardDisplay {
+    position: relative;
+    padding: 2em 3em;
+    background-color: rgba(0, 94, 255, 0.379);
+}
+.info {
+    position: absolute;
+    width: 50%;
+    left: 11em;
+    bottom: 10em;
+}
+.three-pillar {
+    display: flex;
+}
+
+.midSection {
+    display: block;
+    margin: 1em;
+    text-align: center;
+}
+.mid2 {
+    border-left: 2px solid grey;
+    border-right: 2px solid grey;
+}
