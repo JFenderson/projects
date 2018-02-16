@@ -2,7 +2,7 @@
     (function () {
         const myQuestions = [
             {
-                question: "How tall is Tyler?",
+                question: "How tall is Tyler(teacher)?",
                 answers: {
                     a: "5'2",
                     b: "6'0",
@@ -54,14 +54,79 @@
             {
                 question: "When does class end?",
                 answers: {
-                    a: "April ",
-                    b: "JavaScript",
-                    c: "CSS",
-                    d: "Portugese"
+                    a: "April 22 ",
+                    b: "April 8",
+                    c: "March 30",
+                    d: "Today"
+                },
+                correctAnswer: "b"
+            },
+            {
+                question: "How tall is tyler(student)?",
+                answers: {
+                    a: "6'1",
+                    b: "5'10",
+                    c: "6'4",
+                    d: "Hell if I know"
+                },
+                correctAnswer: "d"
+            },
+            {
+                question: "who's always unplugging the computers?",
+                answers: {
+                    a: "Matthew",
+                    b: "Ana",
+                    c: "Lydia",
+                    d: "Andrew"
+                },
+                correctAnswer: "d"
+            },
+            {
+                question: "who is the troll-god on slack?",
+                answers: {
+                    a: "Chase",
+                    b: "Matthew",
+                    c: "Andrew",
+                    d: "Tyler(teacher)"
                 },
                 correctAnswer: "c"
+            },
+            {
+                question: "How many students were there on the first day on class?",
+                answers: {
+                    a: "9",
+                    b: "14",
+                    c: "12",
+                    d: "16"
+                },
+                correctAnswer: "b"
             }
         ];
+
+      var results = myQuestions.reduce((map, obj) => {
+          map[obj.key] = obj.val;
+          return map;
+      })
+
+      for(i = 0; i < results.length;i++){
+          console.log(results[i]);
+      }
+      
+
+
+    // myQuestions.map((o) => {
+    //     return Object.keys(o)
+    // }).reduce((prev, curr) =>{
+    //     return prev.concat(curr)
+    // }).filter((col, i , array) => {
+    //     return array.indexOf(col) === i
+    //     console.log(o)
+    // });
+
+    
+
+
+
 
         function buildQuiz() {
             const output = [];
@@ -70,16 +135,22 @@
             myQuestions.forEach((currentQuestion, questionNumber) => {
                 
                 const answers = [];
-
+                
+        
                 
                 for (letter in currentQuestion.answers) {
                     
                     answers.push(
-                        `<label>
-            <input type="radio" name="question${questionNumber}" value="${letter}">
-            ${letter} :
-            ${currentQuestion.answers[letter]}
-          </label>`
+                        
+                    `<ul class="radioBtn">
+                        <li>
+                            <input class="selector" type="radio" :checked id="option" name="question${questionNumber}" value="${letter}">
+                            <label for="option">
+                            ${letter} : ${currentQuestion.answers[letter]}
+                            </label>
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                    </ul>`
                     );
                 }
 
@@ -90,7 +161,7 @@
                     </div>`
                 );
             });
-
+            console.log();
             quizContainer.innerHTML = output.join("");
         }
 
