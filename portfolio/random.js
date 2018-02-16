@@ -2,14 +2,14 @@
     (function () {
         const myQuestions = [
             {
-                question: "How tall is Tyler(teacher)?",
+                question: "Whats the hardest Language?",
                 answers: {
-                    a: "5'2",
-                    b: "6'0",
-                    c: "4'8",
-                    d: "5'5"
+                    a: "HTML",
+                    b: "JavaScript",
+                    c: "CSS",
+                    d: "Portugese"
                 },
-                correctAnswer: "a"
+                correctAnswer: "c"
             },
             {
                 question: "Where is Lydia orginally from?",
@@ -30,6 +30,16 @@
                     d: "Portugese"
                 },
                 correctAnswer: "c"
+            },
+            {
+                question: "How tall is Tyler(teacher)?",
+                answers: {
+                    a: "5'2",
+                    b: "6'0",
+                    c: "4'8",
+                    d: "5'5"
+                },
+                correctAnswer: "a"
             },
             {
                 question: "What high-school did Matthew go to?",
@@ -161,8 +171,10 @@
                     </div>`
                 );
             });
-            console.log();
+            // console.log();
             quizContainer.innerHTML = output.join("");
+
+            console.log(quizContainer)
         }
 
         function showResults() {
